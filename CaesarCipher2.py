@@ -4,7 +4,7 @@ import string
 letters = string.ascii_lowercase
 specChars = string.punctuation
 
-# Problem 2
+# Find key for decryption
 def findKey(cipher):
     mostCommonIndex = 4
 
@@ -27,7 +27,6 @@ def findLetterDist(cipher):
     return distDict
 
 def main():
-    # Problem 2
     f_input = input('File Name: ')
 
     text = open(f_input, 'r').read().lower().strip()
@@ -45,8 +44,7 @@ def main():
     key = findKey(text)
     
     print("Key: " + str(key))
-
-    # Problem 3
+    
     plain = ""
 
     for i in range(textLen):
